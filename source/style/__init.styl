@@ -1,0 +1,26 @@
+vendor(prop, args)
+  for vendor in webkit moz ms o
+    -{vendor}-{prop} args
+  {prop} args
+
+back-invisible()
+  -webkit-backface-visibility: hidden
+  -moz-backface-visibility: hidden
+  -o-backface-visibility: hidden
+  backface-visibility: hidden
+
+flexbox()
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  
+flex()
+  vendor(flex, 1)
+
+transform-transition(args)
+  -webkit-transition: -webkit-transform args
+  -moz-transition: -moz-transform args
+  -o-transition: -o-transform args
+  transition: transform args

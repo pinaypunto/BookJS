@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=0" />
+  <link rel="stylesheet" type="text/css" href="dist/Book.css">
+  <title>Sa</title>
+
+  <style type="text/css">
+
+    body > div {
+      /*-webkit-transform: rotateX(15deg);*/
+      border: 1px dotted red;
+      width: 1000px;
+      height: 160px;
+      margin: 50px auto;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div id="container_0"></div>
+
+  <script type="text/javascript" src="dist/Book.debug.js"></script>
+  <script type="text/javascript">
+    var book = Book.create();
+    book.addPage("<div class='padding'>111 --> Mansour bin Zayed Al Nahyan, propietario del Al Jazira y del <a href='http://www.google.es'>City</a>, es uno de los muchos enamorados de Xavi. Tanto que hace tiempo que trata de sedu Nou.!</div>");
+    book.addPage("<div class='padding'>111 --> Mansour bin Zayed Al Nahyan, propietario del Al Jazira y del <a href='http://www.google.es'>City</a>, es uno de los muchos enamorados de Xavi. Tanto que hace tiempo que trata de sedu Nou.!</div>");
+    book.addPage("<div class='padding'>111 --> Mansour bin Zayed Al Nahyan, propietario del Al Jazira y del <a href='http://www.google.es'>City</a>, es uno de los muchos enamorados de Xavi. Tanto que hace tiempo que trata de sedu Nou.!</div>");
+    book.addPage("<div class='padding'>111 --> Mansour bin Zayed Al Nahyan, propietario del Al Jazira y del <a href='http://www.google.es'>City</a>, es uno de los muchos enamorados de Xavi. Tanto que hace tiempo que trata de sedu Nou.!</div>");
+    book.addPage("<div class='padding'>111 --> Mansour bin Zayed Al Nahyan, propietario del Al Jazira y del <a href='http://www.google.es'>City</a>, es uno de los muchos enamorados de Xavi. Tanto que hace tiempo que trata de sedu Nou.!</div>");
+    // book.addPage("<div class='padding'>222 --> Mansour bin Zayed Al Nahyan, propietario del Al Jazira y del Manchester City, es uno de los muchos enamorados de Xavi. Tanto que hace tiempo que trata de sedu Nou.!</div>");
+    // book.addPage("<div class='padding'>333 --> Mansour bin Zayed Al Nahyan, propietario del Al Jazira y del Manchester City, es uno de los muchos enamorados de Xavi. Tanto que hace tiempo que trata de sedu Nou.!</div>");    book.addPage("<div class='padding'>444 --> Mansour bin Zayed Al Nahyan, propietario del Al Jazira y del Manchester City, es uno de los muchos enamorados de Xavi. Tanto que hace tiempo que trata de sedu Nou.!</div>");
+    // book.addPage("<div class='padding'>555 --> Mansour bin Zayed Al Nahyan, propietario del Al Jazira y del Manchester City, es uno de los muchos enamorados de Xavi. Tanto que hace tiempo que trata de sedu Nou.!</div>");    
+    // book.addPage("<div class='padding'>666 --> Mansour bin Zayed Al Nahyan, propietario del Al Jazira y del Manchester City, es uno de los muchos enamorados de Xavi. Tanto que hace tiempo que trata de sedu Nou.!</div>");    
+    // book.addPage("<div class='padding'>777 --> Mansour bin Zayed Al Nahyan, propietario del Al Jazira y del Manchester City, es uno de los muchos enamorados de Xavi. Tanto que hace tiempo que trata de sedu Nou.!</div>");    
+    // book.addPage("<div class='padding'>888 --> Mansour bin Zayed Al Nahyan, propietario del Al Jazira y del Manchester City, es uno de los muchos enamorados de Xavi. Tanto que hace tiempo que trata de sedu Nou.!</div>");    
+    book.render(document.getElementById("container_0"));
+
+
+    var loop = function() {
+      var command = "next", i = 0;
+      var route = function() {
+        if(!book[command]()) {
+          command = command === "next" ? "previous" : "next";
+          book[command]();
+        }
+      }
+      setInterval(route, 600);
+    };
+
+
+
+    // setTimeout(function() {
+    //   loop();
+    // }, 200);
+    
+
+  </script>
+</body>
+</html>

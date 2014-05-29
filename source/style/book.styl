@@ -1,0 +1,51 @@
+TRANSITION_TIME = 600ms
+TRANSITION_FUNCTION = ease-out
+
+
+
+article.book
+  vendor(perspective, 1000px)
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+  position: relative
+
+  & > section.book-page
+    vendor(transform-style, preserve-3d)
+    vendor(transform-origin, 0% 50%)
+    width: 50% !important
+    height: 100%
+    right: 0
+    position: absolute
+
+    &:not([book-page-noanim])
+      transform-transition(TRANSITION_TIME TRANSITION_FUNCTION)
+      
+    &[data-status="passed"]
+      vendor(transform, rotateY(-180deg))
+      
+    & > div
+      display: block
+      height: 100%
+      width: 100%
+      position: absolute
+      overflow: hidden
+      vendor(backface-visibility, hidden)
+
+      &.book-page-front
+        background: #F9F9F9
+
+      &.book-page-back
+        vendor(transform, rotateY(-180deg) translateZ(1px))
+        background: #FAFAFA
+
+      &[data-page-type="double"]
+        display: block
+        visibily:visible
+        background-color: red
+        overflow: auto
+        & > div
+          overflow: auto
+          width: 110%
+          height: 100%

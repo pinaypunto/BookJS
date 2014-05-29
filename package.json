@@ -1,0 +1,17 @@
+{
+  "name": "Book",
+  "version": "0.0.1",
+  "description": "JS+HTML5+CSS3 Book UI",
+  "homepage": "http://",
+  "author": {
+    "name": "Ignacio Olalde"
+  },
+  "devDependencies": {
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-stylus": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-watch": "*"
+  }
+}
